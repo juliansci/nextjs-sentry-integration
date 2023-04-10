@@ -4,9 +4,13 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const handleFetch = () => {
+    throw new Error("This is an error");
+  };
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>Sentry Integration</h1>
+      <button onClick={handleFetch}>Fetch</button>
     </main>
   );
 }
